@@ -330,7 +330,6 @@ class DateTime extends Base
     }
 
     /**
-     * @param string|null $countryCode
      * @return string
      *
      * @example 'Europe/Paris'
