@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="5.6.0@e784128902dfe01d489c4123d69918a9f3c1eac5">
+<files psalm-version="5.11.0@c9b192ab8400fdaf04b2b13d110575adc879aa90">
   <file src="src/Faker/Calculator/Luhn.php">
     <InvalidReturnStatement>
       <code>0</code>
@@ -10,7 +10,7 @@
   </file>
   <file src="src/Faker/Generator.php">
     <InvalidReturnStatement>
-      <code>$this-&gt;uniqueGenerator</code>
+      <code><![CDATA[$this->uniqueGenerator]]></code>
       <code>new ChanceGenerator($this, $weight, $default)</code>
       <code>new ValidGenerator($this, $validator, $maxRetries)</code>
     </InvalidReturnStatement>
@@ -27,7 +27,8 @@
   </file>
   <file src="src/Faker/ORM/Doctrine/EntityPopulator.php">
     <UndefinedClass>
-      <code>$this-&gt;class</code>
+      <code><![CDATA[$this->class]]></code>
+      <code><![CDATA[$this->class->associationMappings]]></code>
       <code>\Doctrine\ODM\MongoDB\Mapping\ClassMetadata</code>
       <code>\Doctrine\ODM\MongoDB\Mapping\ClassMetadata</code>
       <code>\Doctrine\ODM\MongoDB\Mapping\ClassMetadata</code>
@@ -48,7 +49,7 @@
   </file>
   <file src="src/Faker/ORM/Mandango/Populator.php">
     <UndefinedClass>
-      <code>$this-&gt;mandango</code>
+      <code><![CDATA[$this->mandango]]></code>
       <code>Mandango</code>
     </UndefinedClass>
   </file>
@@ -106,7 +107,7 @@
   </file>
   <file src="src/Faker/ORM/Spot/EntityPopulator.php">
     <InvalidReturnStatement>
-      <code>$this-&gt;mapper</code>
+      <code><![CDATA[$this->mapper]]></code>
     </InvalidReturnStatement>
     <InvalidReturnType>
       <code>string</code>
@@ -120,18 +121,18 @@
     </UndefinedClass>
     <UndefinedDocblockClass>
       <code>$locator</code>
-      <code>$this-&gt;mapper</code>
-      <code>$this-&gt;mapper</code>
-      <code>$this-&gt;mapper</code>
-      <code>$this-&gt;mapper</code>
-      <code>$this-&gt;mapper</code>
+      <code><![CDATA[$this->mapper]]></code>
+      <code><![CDATA[$this->mapper]]></code>
+      <code><![CDATA[$this->mapper]]></code>
+      <code><![CDATA[$this->mapper]]></code>
+      <code><![CDATA[$this->mapper]]></code>
       <code>Locator</code>
       <code>Mapper</code>
     </UndefinedDocblockClass>
   </file>
   <file src="src/Faker/ORM/Spot/Populator.php">
     <UndefinedClass>
-      <code>$this-&gt;locator</code>
+      <code><![CDATA[$this->locator]]></code>
       <code>Locator</code>
     </UndefinedClass>
     <UndefinedDocblockClass>
@@ -142,12 +143,22 @@
     <InvalidArgument>
       <code>[static::class, 'randomDigit']</code>
     </InvalidArgument>
-    <NoValue>
-      <code>$array</code>
-    </NoValue>
+    <UndefinedClass>
+      <code>\UnitEnum</code>
+      <code>\UnitEnum</code>
+    </UndefinedClass>
     <UndefinedDocblockClass>
       <code>Closure</code>
     </UndefinedDocblockClass>
+    <UndefinedFunction>
+      <code>enum_exists($array)</code>
+      <code>enum_exists($array)</code>
+    </UndefinedFunction>
+  </file>
+  <file src="src/Faker/Provider/Biased.php">
+    <InvalidParamDefault>
+      <code>callable</code>
+    </InvalidParamDefault>
   </file>
   <file src="src/Faker/Provider/File.php">
     <FalsableReturnStatement>
